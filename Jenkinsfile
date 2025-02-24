@@ -27,7 +27,6 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'python3 -m pip install --upgrade --user pip'
-                sh 'python3 -m pip install --user -r requirements.txt'
                 sh 'export PATH=$HOME/.local/bin:$PATH'
             }
         }
