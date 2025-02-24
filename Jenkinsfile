@@ -27,7 +27,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'python3 -m pip install --upgrade --user pip'
-                sh 'export PATH=$HOME/.local/bin:$PATH'
+                sh 'export PATH=/var/lib/jenkins/.local/bin:$PATH'
+                sh 'export PYTHONPATH=/var/lib/jenkins/.local/lib/python3.9/site-packages:$PYTHONPATH'
             }
         }
 
