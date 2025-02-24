@@ -23,6 +23,12 @@ pipeline {
                 checkout scm
             }
         }
+        
+        stage('Install Dependencies') {
+            steps {
+                sh 'python3 -m pip install --upgrade pip'
+            }
+        }
 
         stage('Execute AWS Operations') {
             steps {
